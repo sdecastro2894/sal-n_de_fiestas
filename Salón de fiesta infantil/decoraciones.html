@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoraciones - Salón de Fiestas Infantiles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/">Logo</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="animadores.html">Animadores</a></li>
+                    <li><a href="decoraciones.html" class="active">Decoraciones</a></li>
+                    <li><a href="#">Comida y Bebida</a></li>
+                    <li><a href="#">Formas de pago</a></li>
+                    <li><a href="#">¡Visítanos!</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <button class="btn btn-primary">Reserva</button>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menú">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Decoraciones temáticas para fiestas infantiles</h1>
+                        <p>
+                            Transformamos cualquier espacio en un mundo mágico y colorido para la celebración de tu pequeño.
+                            Nuestras decoraciones temáticas harán que la fiesta sea un evento inolvidable lleno de magia y diversión.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-dark">Ver galería</button>
+                            <button class="btn btn-outline">Reservar ahora</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://via.placeholder.com/400" alt="Decoraciones temáticas">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Our Decorations Section -->
+        <section class="why-choose-us">
+            <div class="container">
+                <div class="why-choose-us-content">
+                    <div class="why-choose-us-text">
+                        <h2>
+                            ¿Por qué elegir nuestras decoraciones para tu fiesta infantil?
+                        </h2>
+                        <p>
+                            Nuestras decoraciones temáticas están diseñadas para crear ambientes mágicos y personalizados
+                            que harán brillar los ojos de los niños. Trabajamos con materiales de alta calidad y un equipo
+                            creativo que se encarga de cada detalle para hacer de tu fiesta un evento único.
+                        </p>
+                        <ul class="features-list">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span>Decoraciones personalizadas según la temática que elijas.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span>Materiales de alta calidad y seguros para los niños.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span>Montaje y desmontaje incluido en todos nuestros servicios.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="why-choose-us-image">
+                        <img src="https://via.placeholder.com/400" alt="Nuestras decoraciones">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrusel Section -->
+        <div class="full-img" id="fullImgBox">
+            <img src="/img/Galería de decoraciones/1.jpg" alt="Decoración de Superhéroes" class="galery-img">
+            <img src="/img/Galería de decoraciones/prev.png" alt="prev-btn">
+            <img src="/img/Galería de decoraciones/next.png" alt="next-btn">
+            <span id="closeImg">X</span>
+        </div>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">
+                    Galería de nuestras decoraciones temáticas
+                </h2>
+                <div class="gallery-grid">
+                    <!-- Gallery items -->
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/1.jpg" alt="Decoración de Superhéroes" class="galery-img">
+                        <div class="gallery-caption">Superhéroes</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/2.jpg" alt="Decoración de Princesas" class="galery-img">
+                        <div class="gallery-caption">Princesas</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/3.jpg" alt="Decoración de Animales" class="galery-img">
+                        <div class="gallery-caption">Animales</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/4.jpg" alt="Decoración de Piratas" class="galery-img">
+                        <div class="gallery-caption">Piratas</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/5.jpg" alt="Decoración del Espacio" class="galery-img">
+                        <div class="gallery-caption">Espacio</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/6.jpg" alt="Decoración de Dinosaurios" class="galery-img">
+                        <div class="gallery-caption">Dinosaurios</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/7.jpg" alt="Decoración de Unicornios" class="galery-img">
+                        <div class="gallery-caption">Unicornios</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/8.jpg" alt="Decoración de Circo" class="galery-img">
+                        <div class="gallery-caption">Circo</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/1.jpg" alt="Decoración de Deportes" class="galery-img">
+                        <div class="gallery-caption">Deportes</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/2.jpg" alt="Decoración Bajo el mar" class="galery-img">
+                        <div class="gallery-caption">Bajo el mar</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/3.jpg" alt="Decoración de Selva" class="galery-img">
+                        <div class="gallery-caption">Selva</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Galería de decoraciones/4.jpg" alt="Decoración de Candy" class="galery-img">
+                        <div class="gallery-caption">Candy</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for enlarged images -->
+        <div id="gallery-modal" class="gallery-modal">
+            <div class="modal-content">
+                <img id="modal-image" src="" alt="Imagen ampliada">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-info">
+                        <div class="footer-logo">Logo</div>
+                        <div class="footer-address">
+                            Calle Principal 123<br>
+                            Ciudad, CP 12345
+                        </div>
+                        <div class="footer-contact">
+                            Email: info@example.com<br>
+                            Teléfono: (123) 456-7890
+                        </div>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Servicios</h3>
+                        <ul>
+                            <li><a href="animadores.html">Animadores</a></li>
+                            <li><a href="decoraciones.html">Decoraciones</a></li>
+                            <li><a href="#">Comida y Bebida</a></li>
+                            <li><a href="#">Formas de pago</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Empresa</h3>
+                        <ul>
+                            <li><a href="#">Sobre nosotros</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Términos de servicio</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div>© 2023 Salón de Fiestas Infantiles. Todos los derechos reservados.</div>
+                    <div class="footer-legal">
+                        <a href="#">Términos</a>
+                        <a href="#">Privacidad</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            
+            // Add click event to each gallery image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery modal functionality
+            const galleryItems = document.querySelectorAll('.gallery-item img');
