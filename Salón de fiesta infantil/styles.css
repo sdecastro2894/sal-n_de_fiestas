@@ -275,8 +275,8 @@ header {
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
@@ -659,6 +659,17 @@ header {
     }
 }
 
+@media (min-width: 768px) {
+    .services-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .service-card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
 @media (min-width: 1024px) {
     .main-nav {
         display: flex;
@@ -682,7 +693,12 @@ header {
     }
 
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .service-card {
+        flex: 1;
     }
 
     .why-choose-us-content {

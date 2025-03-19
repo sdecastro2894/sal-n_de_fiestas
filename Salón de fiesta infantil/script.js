@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
+    // Alternar menú móvil
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
     
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Handle window resize for responsive menu
+    // Manejar el cambio de tamaño de ventana para el menú responsive
     window.addEventListener('resize', function() {
         if (window.innerWidth >= 768) {
             if (mainNav) {
@@ -22,131 +22,115 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Dropdown functionality
+    // Funcionalidad del menú desplegable
     const dropdownToggle = document.querySelector('.dropdown-toggle');
     
     if (dropdownToggle) {
         dropdownToggle.addEventListener('click', function(e) {
             e.preventDefault();
-            // Add dropdown menu functionality here if needed
+            // Agregar funcionalidad del menú desplegable aquí si es necesario
         });
     }
     
-    // Gallery modal functionality for all pages
+    // Funcionalidad unificada para galerías y carruseles
     const galleryItems = document.querySelectorAll('.gallery-item img');
     const modal = document.getElementById('gallery-modal');
+    const fullImgBox = document.getElementById('fullImgBox');
     
+    // Función genérica para cerrar modales al hacer clic fuera
+    function setupModalClosing(modalElement) {
+        if (modalElement) {
+            modalElement.addEventListener('click', function(e) {
+                if (e.target === modalElement) {
+                    modalElement.style.display = 'none';
+                }
+            });
+        }
+    }
+    
+    // Configurar cierre para ambos tipos de modales
+    setupModalClosing(modal);
+    setupModalClosing(fullImgBox);
+    
+    // Funcionalidad del modal de galería para todas las páginas
     if (galleryItems.length > 0 && modal) {
         const modalImg = document.getElementById('modal-image');
-        
-        // Add click event to each gallery image
-        galleryItems.forEach(item => {
-            item.addEventListener('click', function() {
-                modal.style.display = 'flex';
-                modalImg.src = this.src;
-            });
-        });
-        
-        // Close modal when clicking outside the image
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
+        // La funcionalidad de cierre ya está configurada por setupModalClosing
     }
 
-    // Carousel and Gallery functionality for decoraciones.html
-    if (document.querySelector('.gallery-section')) {
-        // Variables para el carrusel
-        const galleryItems = document.querySelectorAll('.gallery-item img');
-        const fullImgBox = document.getElementById('fullImgBox');
+    // Funcionalidad del carrusel y galería para decoraciones.html
+    if (document.querySelector('.gallery-section') && fullImgBox) {
+        const fullImg = fullImgBox.querySelector('.galery-img');
+        const closeBtn = document.getElementById('closeImg');
+        const prevBtn = fullImgBox.querySelector('img[alt="prev-btn"]');
+        const nextBtn = fullImgBox.querySelector('img[alt="next-btn"]');
+        let currentIndex = 0;
+        const images = [];
         
-        if (fullImgBox) {
-            const fullImg = fullImgBox.querySelector('.galery-img');
-            const closeBtn = document.getElementById('closeImg');
-            const prevBtn = fullImgBox.querySelector('img[alt="prev-btn"]');
-            const nextBtn = fullImgBox.querySelector('img[alt="next-btn"]');
-            let currentIndex = 0;
-            const images = [];
-            
-            // Recopilar todas las imágenes y sus rutas
-            galleryItems.forEach((item, index) => {
-                images.push({
-                    src: item.src,
-                    alt: item.alt
-                });
-                
-                // Agregar evento de clic a cada imagen de la galería
-                item.addEventListener('click', function() {
-                    currentIndex = index;
-                    // Asegurar que la imagen se muestre correctamente desde el primer clic
-                    fullImg.style.maxWidth = '80%';
-                    fullImg.style.maxHeight = '80vh';
-                    updateCarouselImage();
-                    fullImgBox.style.display = 'flex';
-                });
-            });
-            
-            // Función para actualizar la imagen del carrusel
-            function updateCarouselImage() {
-                // Asegurar que la imagen mantiene su tamaño correcto
+        // Función para actualizar la imagen del carrusel
+        function updateCarouselImage() {
+            if (fullImg && images.length > 0) {
                 fullImg.src = images[currentIndex].src;
                 fullImg.alt = images[currentIndex].alt;
                 fullImg.style.maxWidth = '80%';
                 fullImg.style.maxHeight = '80vh';
             }
+        }
+        
+        // Función para navegar por las imágenes
+        function navigateCarousel(direction) {
+            if (images.length > 0) {
+                currentIndex = (currentIndex + direction + images.length) % images.length;
+                updateCarouselImage();
+            }
+        }
+        
+        // Recopilar todas las imágenes y sus rutas
+        galleryItems.forEach((item, index) => {
+            images.push({
+                src: item.src,
+                alt: item.alt
+            });
             
-            // Evento para el botón de cerrar
+            // Agregar evento de clic a cada imagen de la galería
+            item.addEventListener('click', function() {
+                currentIndex = index;
+                updateCarouselImage();
+                if (fullImgBox) fullImgBox.style.display = 'flex';
+            });
+        });
+        
+        // Evento para el botón de cerrar
+        if (closeBtn) {
             closeBtn.addEventListener('click', function() {
                 fullImgBox.style.display = 'none';
             });
-            
-            // Evento para el botón anterior
+        }
+        
+        // Eventos para navegación
+        if (prevBtn) {
             prevBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                updateCarouselImage();
-            });
-            
-            // Evento para el botón siguiente
-            nextBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex + 1) % images.length;
-                updateCarouselImage();
-            });
-            
-            // Cerrar el carrusel al hacer clic fuera de la imagen
-            fullImgBox.addEventListener('click', function(e) {
-                if (e.target === fullImgBox) {
-                    fullImgBox.style.display = 'none';
-                }
-            });
-            
-            // Navegación con teclado cuando el carrusel está abierto
-            document.addEventListener('keydown', function(e) {
-                if (fullImgBox.style.display === 'flex') {
-                    if (e.key === 'ArrowLeft') {
-                        currentIndex = (currentIndex - 1 + images.length) % images.length;
-                        updateCarouselImage();
-                    } else if (e.key === 'ArrowRight') {
-                        currentIndex = (currentIndex + 1) % images.length;
-                        updateCarouselImage();
-                    } else if (e.key === 'Escape') {
-                        fullImgBox.style.display = 'none';
-                    }
-                }
+                navigateCarousel(-1);
             });
         }
         
-        // Gallery modal functionality
-        const modal = document.getElementById('gallery-modal');
-        if (modal) {
-            const modalImg = document.getElementById('modal-image');
-            
-            // Close modal when clicking outside the image
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                navigateCarousel(1);
             });
         }
+        
+        // Navegación con teclado cuando el carrusel está abierto
+        document.addEventListener('keydown', function(e) {
+            if (fullImgBox && fullImgBox.style.display === 'flex') {
+                if (e.key === 'ArrowLeft') {
+                    navigateCarousel(-1);
+                } else if (e.key === 'ArrowRight') {
+                    navigateCarousel(1);
+                } else if (e.key === 'Escape') {
+                    fullImgBox.style.display = 'none';
+                }
+            }
+        });
     }
 });
