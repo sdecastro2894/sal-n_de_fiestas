@@ -3,27 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salón de Fiestas Infantiles</title>
+    <title>Salón de Fiestas Infantiles en Montevideo | Celebraciones Inolvidables</title>
+    <meta name="description" content="Salón de fiestas infantiles en Montevideo. Ofrecemos animadores, decoraciones temáticas, comida y bebida para hacer de tu celebración un evento inolvidable.">
+    <meta name="keywords" content="salón de fiestas infantiles, fiestas infantiles Montevideo, animadores para fiestas, decoraciones temáticas, comida para fiestas, celebraciones infantiles, cumpleaños niños">
+    <meta name="author" content="Sebastian de Castro">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://muestrasalon.web.app/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://muestrasalon.web.app/">
+    <meta property="og:title" content="Salón de Fiestas Infantiles en Montevideo | Celebraciones Inolvidables">
+    <meta property="og:description" content="Salón de fiestas infantiles en Montevideo. Ofrecemos animadores, decoraciones temáticas, comida y bebida para hacer de tu celebración un evento inolvidable.">
+    <meta property="og:image" content="https://muestrasalon.web.app/img/Fachada.webp">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://muestrasalon.web.app/">
+    <meta property="twitter:title" content="Salón de Fiestas Infantiles en Montevideo | Celebraciones Inolvidables">
+    <meta property="twitter:description" content="Salón de fiestas infantiles en Montevideo. Ofrecemos animadores, decoraciones temáticas, comida y bebida para hacer de tu celebración un evento inolvidable.">
+    <meta property="twitter:image" content="https://muestrasalon.web.app/img/Fachada.webp">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Salón de Fiestas Infantiles",
+    "image": "https://muestrasalon.web.app/img/Fachada.webp",
+    "url": "https://muestrasalon.web.app/",
+    "telephone": "(123) 456-7890",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ejido y Av. 18 de Julio",
+        "addressLocality": "Montevideo",
+        "addressRegion": "Montevideo",
+        "addressCountry": "UY"
+    },
+    "geo": {
+        "@type": "GeoCoordinates"
+    },
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+        ]
+    },
+    "sameAs": [
+        "https://www.facebook.com/",
+        "https://twitter.com/",
+        "https://www.instagram.com/"
+    ] 
+    }
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="whatsapp-button.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 </head>
 <body>
     <header>
         <div class="container header-container">
             <div class="logo">
-                <a href="/">Logo</a>
+                <a href="index.html">
+                    <img src="/img/Logo salón.webp" alt="Logo">
+                </a>
             </div>
             <nav class="main-nav">
                 <ul>
                     <li><a href="animadores.html">Animadores</a></li>
                     <li><a href="decoraciones.html">Decoraciones</a></li>
                     <li><a href="comida-bebida.html">Comida y Bebida</a></li>
-                    <li><a href="#">Formas de pago</a></li>
-                    <li><a href="#">¡Visítanos!</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="calculo-presupuesto.html">Cálculo de presupuesto</a></li>
                 </ul>
             </nav>
             <div class="header-buttons">
-                <button class="btn btn-primary">Reserva</button>
+                <a href="#consultation-form" class="btn btn-primary">CALCULÁ TU PRESUPUESTO</a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Menú">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -44,12 +106,12 @@
                             evento memorable.
                         </p>
                         <div class="hero-buttons">
-                            <button class="btn btn-dark">Explorar</button>
-                            <button class="btn btn-outline">Reservar</button>
+                            <a href="#consultation-form" class="btn btn-dark">Calculá tu presupuesto</a>
+                            <a href="contacto.html" class="btn btn-outline">Comunicate con nosotros</a>
                         </div>
                     </div>
                     <div class="hero-image">
-                        <img src="/img/Fachada.png" alt="Salón de fiestas">
+                        <img src="/img/Fachada.webp" alt="Salón de fiestas">
                     </div>
                 </div>
             </div>
@@ -70,10 +132,7 @@
                         <p>
                             Contamos con animadores profesionales que harán de la fiesta un evento divertido.
                         </p>
-                        <a href="#" class="link-with-arrow">
-                            Más 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                        </a>
+                        <img src="/img/Juegos.jpg" alt="Panchos con papas fritas" style="margin-top: 1rem; border-radius: 0.25rem;">
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -83,10 +142,7 @@
                         <p>
                             Nuestros equipos se encargan de que todo esté perfecto durante la celebración.
                         </p>
-                        <a href="#" class="link-with-arrow">
-                            Ver 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                        </a>
+                        <img src="/img/Animadores.jpg" alt="Panchos con papas fritas" style="margin-top: 1rem; border-radius: 0.25rem;">
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -96,64 +152,70 @@
                         <p>
                             Transformamos el espacio para que cada fiesta sea única y especial.
                         </p>
-                        <a href="#" class="link-with-arrow">
-                            Explorar 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                        </a>
+                        <img src="/img/Astronauta.jpg" alt="Panchos con papas fritas" style="margin-top: 1rem; border-radius: 0.25rem;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Additional Services Section -->
-        <section class="additional-services">
+        <!-- Carrusel Section -->
+        <div class="full-img" id="fullImgBox">
+            <img src="/img/Galería de decoraciones/1.webp" alt="Decoración de Superhéroes" class="galery-img">
+            <img src="/img/Galería de decoraciones/prev.png" alt="prev-btn">
+            <img src="/img/Galería de decoraciones/next.png" alt="next-btn">
+            <span id="closeImg">X</span>
+        </div>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
             <div class="container">
                 <h2 class="section-title">
-                    Servicios excepcionales para hacer de tu fiesta un evento inolvidable
+                    Galería de nuestras instalaciones
                 </h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                        </div>
-                        <h3>Diversión garantizada con nuestros juegos y actividades para niños</h3>
-                        <p>
-                            Contamos con una amplia gama de juegos para todos los detalles.
-                        </p>
-                        <a href="#" class="link-with-arrow">
-                            Descubre 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                        </a>
+                <div class="gallery-grid">
+                    <!-- Gallery items -->
+                    <div class="gallery-item">
+                        <img src="/img/Fotos de salón/1.jpg" alt="Decoración de Superhéroes" class="galery-img">
+                        <div class="gallery-caption">Fachada</div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                        </div>
-                        <h3>Animadores profesionales que mantienen la alegría en cada fiesta</h3>
-                        <p>
-                            Nuestros animadores son expertos en entretener y hacer reír a los niños.
-                        </p>
-                        <a href="#" class="link-with-arrow">
-                            Conoce 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                        </a>
+                    <div class="gallery-item">
+                        <img src="/img/Fotos de salón/2.jpg" alt="Decoración de Princesas" class="galery-img">
+                        <div class="gallery-caption">Zona de fotos</div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                        </div>
-                        <h3>Deliciosa comida y decoración temática para cada ocasión</h3>
-                        <p>
-                            Ofrecemos menús variados y decoraciones personalizadas para cada fiesta.
-                        </p>
-                        <a href="#" class="link-with-arrow">
-                            Reserva 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                        </a>
+                    <div class="gallery-item">
+                        <img src="/img/Fotos de salón/3.jpg" alt="Decoración de Animales" class="galery-img">
+                        <div class="gallery-caption">Juegos</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Fotos de salón/4.jpg" alt="Decoración de Piratas" class="galery-img">
+                        <div class="gallery-caption">Pelotero</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Fotos de salón/5.jpg" alt="Decoración del Espacio" class="galery-img">
+                        <div class="gallery-caption">Pista led</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Fotos de salón/6.jpg" alt="Decoración de Dinosaurios" class="galery-img">
+                        <div class="gallery-caption">Cancha</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Fotos de salón/7.jpg" alt="Decoración de Unicornios" class="galery-img">
+                        <div class="gallery-caption">Decoraciones</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/img/Fotos de salón/8.jpg" alt="Decoración de Circo" class="galery-img">
+                        <div class="gallery-caption">Zona comedor</div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Modal for enlarged images -->
+        <div id="gallery-modal" class="gallery-modal">
+            <div class="modal-content">
+                <img id="modal-image" src="" alt="Imagen ampliada">
+            </div>
+        </div>
 
         <!-- Why Choose Us Section -->
         <section class="why-choose-us">
@@ -184,7 +246,7 @@
                         </ul>
                     </div>
                     <div class="why-choose-us-image">
-                        <img src="https://via.placeholder.com/400" alt="Nuestro salón">
+                        <img src="/img/juegos de salon.jpg" alt="Nuestro salón">
                     </div>
                 </div>
             </div>
@@ -202,28 +264,76 @@
                                 momento inolvidable para tus hijos.
                             </p>
                             <div class="cta-buttons">
-                                <button class="btn btn-dark">Reservar</button>
-                                <button class="btn btn-outline">Más información</button>
+                                <a href="#consultation-form" class="btn btn-dark">Obtené tu presupuesto</a>
+                                <a href="contacto.html" class="btn btn-outline">Contáctanos para más información</a>
                             </div>
                         </div>
                         <div class="cta-image">
-                            <img src="https://via.placeholder.com/200" alt="Celebra con nosotros">
+                            <img src="/img/Logo salón.webp" alt="Celebra con nosotros">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    <!-- Formulario de Reserva Section -->
+    <section class="consultation-form">
+        <div class="container">
+            <h2 class="section-title">Calcula tu Presupuesto</h2>
+            <form id="consultation-form" class="form-container">
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="number" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nombre del agasajado</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Edad</label>
+                    <input type="number" id="age" name="age" min="1" max="99" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Fecha de celebración</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group-title">Cantidad de invitados</div>
+                    <div class="form-group half">
+                        <label for="adults">Adultos</label>
+                        <input type="number" id="adults" name="adults" min="0" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="children">Niños</label>
+                        <input type="number" id="children" name="children" min="1" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-dark">DESCARGAR PRESUPUESTO</button>
+                </div>
+            </form>
+        </div>
+    </section>
     </main>
+
+
 
     <footer>
         <div class="footer-main">
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-info">
-                        <div class="footer-logo">Logo</div>
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="/img/Logo salón.webp" alt="logo salón">
+                            </a>
+                        </div>
                         <div class="footer-address">
-                            Calle Principal 123<br>
-                            Ciudad, CP 12345
+                            Ejido y Av. 18 de Julio<br>
+                            Montevideo, Uruguay
                         </div>
                         <div class="footer-contact">
                             Email: info@example.com<br>
@@ -232,9 +342,6 @@
                         <div class="footer-social">
                             <a href="#" aria-label="Facebook">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                            </a>
-                            <a href="#" aria-label="Twitter">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
                             </a>
                             <a href="#" aria-label="Instagram">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -247,23 +354,13 @@
                             <li><a href="animadores.html">Animadores</a></li>
                             <li><a href="decoraciones.html">Decoraciones</a></li>
                             <li><a href="comida-bebida.html">Comida y Bebida</a></li>
-                            <li><a href="#">Formas de pago</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
                         <h3>Empresa</h3>
                         <ul>
-                            <li><a href="#">Sobre nosotros</a></li>
-                            <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h3>Legal</h3>
-                        <ul>
-                            <li><a href="#">Términos de servicio</a></li>
-                            <li><a href="#">Política de privacidad</a></li>
-                            <li><a href="#">Cookies</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="calculo-presupuesto.html">Cálculo de presupuesto</a></li>
                         </ul>
                     </div>
                 </div>
@@ -272,17 +369,13 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="footer-bottom-content">
-                    <div>© 2023 Salón de Fiestas Infantiles. Todos los derechos reservados.</div>
-                    <div class="footer-legal">
-                        <a href="#">Términos</a>
-                        <a href="#">Privacidad</a>
-                        <a href="#">Cookies</a>
-                    </div>
+                    <div>© 2023 Salón de Fiestas "Salón Mágico". Todos los derechos reservados.</div>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="whatsapp-button.js"></script>
 </body>
 </html>

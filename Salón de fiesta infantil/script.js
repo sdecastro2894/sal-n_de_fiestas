@@ -1,23 +1,108 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Configuración del Intersection Observer para efectos de aparición
+    const fadeUpObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Opcional: dejar de observar el elemento una vez que ha aparecido
+                // fadeUpObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null, // viewport
+        threshold: 0.1, // 10% del elemento visible
+        rootMargin: '0px 0px -50px 0px' // Margen negativo para activar antes
+    });
+    
+    // Seleccionar todos los elementos posteriores al hero que queremos animar
+    const elementsToAnimate = document.querySelectorAll('.hero ~ section .section-title, .hero ~ section .service-card, .hero ~ section .gallery-item, .hero ~ section .why-choose-us-text, .hero ~ section .cta-text, .hero ~ section .consultation-form');
+    
+    // Aplicar la clase inicial y observar cada elemento
+    elementsToAnimate.forEach(element => {
+        element.classList.add('fade-up-element');
+        fadeUpObserver.observe(element);
+    });
+    //Configurar desplazamiento suave para los botones de presupuesto
+    const presupuestoLinks = document.querySelectorAll('a[href="#consultation-form"]');
+    const presupuestoButtons = document.querySelectorAll('.header-buttons .btn-primary');
+    //Botón Ver galería en decoraciones.html
+    const verGaleriaButton = document.querySelector('.hero-buttons .btn-dark');
+    
+    // Función para manejar el desplazamiento suave
+    function smoothScrollToForm(e) {
+        e.preventDefault();
+        const targetElement = document.querySelector('.consultation-form');
+        
+        if (targetElement) {
+            const offset = 80; // Offset para compensar el header fijo
+            window.scrollTo({
+                top: targetElement.offsetTop - offset,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    // Verificar si estamos en la página index.html
+    const isIndexPage = window.location.pathname === '/' || 
+                        window.location.pathname.endsWith('index.html') || 
+                        window.location.pathname.endsWith('/');
+    
+    // Verificar si estamos en la página decoraciones.html
+    const isDecoracionesPage = window.location.pathname.endsWith('decoraciones.html');
+    
+    // Agregar evento a los enlaces solo en la página index
+    if (isIndexPage) {
+        presupuestoLinks.forEach(link => {
+            link.addEventListener('click', smoothScrollToForm);
+        });
+        
+        // Agregar evento a los botones solo en la página index
+        presupuestoButtons.forEach(button => {
+            button.addEventListener('click', smoothScrollToForm);
+        });
+    }
+    
+    // Función para desplazamiento suave a la galería en decoraciones.html
+    function smoothScrollToGallery(e) {
+        e.preventDefault();
+        const targetElement = document.querySelector('.gallery-section');
+        
+        if (targetElement) {
+            const offset = 80; // Offset para compensar el header fijo
+            window.scrollTo({
+                top: targetElement.offsetTop - offset,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    // Agregar evento al botón Ver galería en la página decoraciones
+    if (isDecoracionesPage && verGaleriaButton) {
+        verGaleriaButton.addEventListener('click', smoothScrollToGallery);
+    }
+    
     // Alternar menú móvil
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
     
     if (mobileMenuToggle && mainNav) {
         mobileMenuToggle.addEventListener('click', function() {
-            mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
+            // Alternar clase para mostrar/ocultar el menú
+            mainNav.classList.toggle('menu-active');
+            // Alternar clase para el botón hamburguesa (animación)
+            mobileMenuToggle.classList.toggle('active');
+            // Prevenir scroll cuando el menú está abierto
+            document.body.classList.toggle('menu-open');
         });
     }
     
     // Manejar el cambio de tamaño de ventana para el menú responsive
     window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 1024) {
             if (mainNav) {
-                mainNav.style.display = 'flex';
-            }
-        } else {
-            if (mainNav) {
-                mainNav.style.display = 'none';
+                mainNav.classList.remove('menu-active');
+                document.body.classList.remove('menu-open');
+                mobileMenuToggle.classList.remove('active');
             }
         }
     });
@@ -133,4 +218,56 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Descarga de pdf personalizado segun día e invitados
+    document.getElementById('consultation-form').addEventListener('submit', function(event) {
+        event.preventDefault();  
+        // Obtener valores del formulario
+        const fechaStr = document.getElementById('date').value;
+        const adultos = parseInt(document.getElementById('adults').value, 10);
+        const ninos = parseInt(document.getElementById('children').value, 10);
+        
+        // Convertir la fecha a objeto Date y obtener el día de la semana
+        const fecha = new Date(fechaStr);
+        const diaSemana = fecha.getDay(); 
+        // getDay() devuelve: 0 (domingo), 1 (lunes), …, 6 (sábado)
+
+        // Determinar si es día de semana o fin de semana
+        // Día de semana: lunes (1) a jueves (4)
+        // Fin de semana: viernes (5), sábado (6) y domingo (0)
+        let periodo = '';
+        if(diaSemana >= 1 && diaSemana <= 4) {
+        periodo = 'Día_de_semana';
+        } else {
+        periodo = 'Fin_de_semana';
+        }
+
+        // Determinar nivel de invitados basado en niños o adultos
+        // Nivel 1: hasta 15 niños o hasta 20 adultos
+        // Nivel 2: entre 16 y 20 niños o entre 21 y 25 adultos
+        // Nivel 3: entre 21 y 30 niños o entre 26 y 30 adultos (y si se excede, también se usa el nivel 3)
+        let nivel = '';
+        if(ninos >= 21 || adultos >= 26) {
+        nivel = '30n-30a';
+        } else if((ninos >= 16 && ninos <= 20) || (adultos >= 21 && adultos <= 25)) {
+        nivel = '20n-25a';
+        } else if(ninos <= 15 || adultos <= 20) {
+        nivel = '15n-20a';
+        } else {
+          // Por defecto, si no se cumple ninguna condición anterior, se asigna nivel3
+        nivel = '30n-30a';
+        }
+
+        // Construir la ruta del PDF según el período y nivel determinado.
+        // Ejemplo de ruta: pdf/Día_de_semana_15n-20a.pdf o pdf/Fin_de_semana_30n-30a.pdf
+        const pdfUrl = `pdf/${periodo}_${nivel}.pdf`;
+
+        // Crear un elemento 'a' de forma dinámica para iniciar la descarga
+        const a = document.createElement('a');
+        a.href = pdfUrl;
+        a.download = pdfUrl.substring(pdfUrl.lastIndexOf('/') + 1);
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
 });

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Salón de Fiestas Infantiles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="whatsapp-button.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+</head>
+<body class="contacto-page">
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/img/Logo salón.webp" alt="Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="animadores.html">Animadores</a></li>
+                    <li><a href="decoraciones.html">Decoraciones</a></li>
+                    <li><a href="comida-bebida.html">Comida y Bebida</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="calculo-presupuesto.html">Cálculo de presupuesto</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <a href="calculo-presupuesto.html" class="btn btn-primary">CALCULÁ TU PRESUPUESTO</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menú">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Principal -->
+        <section class="contacto-header">
+            <div class="container">
+                <div class="contacto-content">
+                    <div class="contacto-text">
+                        <h1>Contacta con nosotros</h1>
+                        <p>
+                            ¿Tienes alguna pregunta o quieres reservar nuestro salón para tu próxima fiesta infantil? Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo lo antes posible, o utiliza la información de contacto para comunicarte directamente con nosotros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Formulario y Mapa -->
+        <section class="contacto-form-section">
+            <div class="container">
+                <div class="contacto-grid">
+                    <!-- Formulario de Contacto -->
+                    <div class="form-container">
+                        <h2 class="section-title">Envíanos un mensaje</h2>
+                        <form id="contacto-form">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ej.: Pedro" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="number" id="telefono" name="telefono" placeholder="Ej.: 099 123 456" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto</label>
+                                <input type="text" id="asunto" name="asunto" placeholder="Ej.: Fecha de disponibilidad" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Ej.: Quisiera saber si tienen disponibilidad para el día..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-dark">ENVIAR MENSAJE</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Mapa e Información de Contacto -->
+                    <div class="mapa-info">
+                        <div class="mapa-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1945.5669945595712!2d-56.18843420984663!3d-34.90543005715747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81cca023f7a9%3A0x144e806a0872bdf0!2sAvenida%2018%20de%20Julio%20%26%20Ejido%2C%2011100%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1742707266765!5m2!1ses-419!2suy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="info-contacto">
+                            <h3>Información de contacto</h3>
+                            <p><strong>Dirección:</strong> Ejido y Av. 18 de Julio, Montevideo, Uruguay</p>
+                            <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                            <p><strong>Email:</strong> info@example.com</p>
+                            <p><strong>Horario:</strong> Lunes a Viernes 9:00 - 18:00, Sábados 10:00 - 14:00</p>
+                            <div class="redes-sociales">
+                                <a href="#" aria-label="Facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                </a>
+                                <a href="#" aria-label="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="/img/Logo salón.webp" alt="logo salón">
+                            </a>
+                        </div>
+                        <div class="footer-address">
+                            Ejido y Av. 18 de Julio<br>
+                            Montevideo, Uruguay
+                        </div>
+                        <div class="footer-contact">
+                            Email: info@example.com<br>
+                            Teléfono: (123) 456-7890
+                        </div>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Servicios</h3>
+                        <ul>
+                            <li><a href="animadores.html">Animadores</a></li>
+                            <li><a href="decoraciones.html">Decoraciones</a></li>
+                            <li><a href="comida-bebida.html">Comida y Bebida</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Empresa</h3>
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="calculo-presupuesto.html">Cálculo de presupuesto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div>© 2023 Salón de Fiestas "Salón Mágico". Todos los derechos reservados.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="whatsapp-button.js"></script>
+    <script src="contacto.js"></script>
+</body>
+</html>

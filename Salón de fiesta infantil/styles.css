@@ -5,13 +5,15 @@
     --secondary-color: #333;
     --backgroundsection-color: #0002;
     --accent-color: #fff;
-    --background-color: rgba(0, 0, 255, 0.3);
+    --background-color: #3cc;
     --title-color: #fff;
     --text-color: #fff;
     --border-color: #e5e5e5;
     --footertitle-color: #000;
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --heading-font-family: 'Marker Felt', 'Comic Sans MS', cursive, sans-serif;
+    --heading-font-family: 'Comic Sans MS', 'Comic Sans', 'Trebuchet MS', cursive;
+    --animation-duration: 0.8s;
+    --animation-delay-increment: 0.1s;
 }
 
 /* Estilos para divs con texto */
@@ -41,7 +43,7 @@ p {
 }
 
 /* Background de color para toda la página */
-body::before {
+.hero ~ section::before {
     content: "";
     position: absolute;
     top: 0;
@@ -54,14 +56,14 @@ body::before {
 }
 
 /* Background de imagen solo para secciones después del hero */
-.hero ~ section::before {
+/*.hero ~ section::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/background.png');
+    background-image: url('img/background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -69,7 +71,7 @@ body::before {
     opacity: 0.5;
     z-index: -2;
     background-blend-mode: multiply;
-}
+}*/
 
 img {
     max-width: 100%;
@@ -147,6 +149,10 @@ header {
     justify-content: space-between;
 }
 
+.logo img {
+    max-height: 70px; /* Ajusta la altura máxima según tus necesidades */
+}
+
 .logo a {
     font-weight: bold;
     font-size: 1.25rem;
@@ -182,6 +188,8 @@ header {
     border: none;
     cursor: pointer;
     color: #000;
+    display: block;
+    z-index: 1001;
 }
 
 /* Hero Section */
@@ -198,7 +206,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/background hero.png');
+    background-image: url('img/background hero.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -251,6 +259,28 @@ header {
 .hero ~ section {
     position: relative;
 }
+
+/* Animación para elementos que aparecen desde abajo */
+.fade-up-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity var(--animation-duration) ease, transform var(--animation-duration) ease;
+}
+
+.fade-up-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Aplicar diferentes retrasos a elementos dentro de una sección */
+.fade-up-element:nth-child(1) { transition-delay: calc(var(--animation-delay-increment) * 0); }
+.fade-up-element:nth-child(2) { transition-delay: calc(var(--animation-delay-increment) * 1); }
+.fade-up-element:nth-child(3) { transition-delay: calc(var(--animation-delay-increment) * 2); }
+.fade-up-element:nth-child(4) { transition-delay: calc(var(--animation-delay-increment) * 3); }
+.fade-up-element:nth-child(5) { transition-delay: calc(var(--animation-delay-increment) * 4); }
+.fade-up-element:nth-child(6) { transition-delay: calc(var(--animation-delay-increment) * 5); }
+.fade-up-element:nth-child(7) { transition-delay: calc(var(--animation-delay-increment) * 6); }
+.fade-up-element:nth-child(8) { transition-delay: calc(var(--animation-delay-increment) * 7); }
 
 /* Services Section */
 .services {
@@ -372,10 +402,6 @@ header {
     font-family: var(--heading-font-family);
 }
 
-.why-choose-us p {
-    /* Color removed and unified with global p selector */
-}
-
 .features-list {
     display: flex;
     flex-direction: column;
@@ -425,10 +451,6 @@ header {
     font-family: var(--heading-font-family);
 }
 
-.cta-text p {
-    /* Color removed and unified with global p selector */
-}
-
 .cta-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -437,6 +459,7 @@ header {
 }
 
 .cta-image {
+    padding: 0.5rem;
     background-color: #f0f0f0;
     aspect-ratio: 1;
     max-width: 200px;
@@ -465,8 +488,20 @@ header {
 }
 
 .footer-logo {
+    max-height: 70px; /* Ajusta la altura máxima según tus necesidades */
     font-weight: bold;
     font-size: 1.25rem;
+}
+
+.footer-logo img {
+    max-height: 60px; /* Altura máxima para la imagen del logo en el footer */
+    width: auto; /* Mantiene la proporción de la imagen */
+}
+
+.footer-logo a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
 }
 
 .footer-address,
@@ -482,6 +517,7 @@ header {
 }
 
 .footer-links h3 {
+    color: var(--primary-color);
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -539,11 +575,16 @@ header {
     overflow: hidden;
     border-radius: 0.25rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    /* Separamos las transiciones para evitar conflictos */
+    transition: box-shadow 0.3s ease;
 }
 
-.gallery-item:hover {
+/* Aplicamos el efecto hover solo cuando el elemento ya es visible */
+.gallery-item.fade-up-element.visible:hover,
+.gallery-item:not(.fade-up-element):hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item img {
@@ -670,9 +711,62 @@ header {
     }
 }
 
+/* Estilos para menú móvil */
+@media (max-width: 1023px) {
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    /* Clase para mostrar el menú cuando está activo */
+    .main-nav.menu-active {
+        display: flex;
+        opacity: 1;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .main-nav a {
+        font-size: 1.25rem;
+    }
+    
+    /* Prevenir scroll cuando el menú está abierto */
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    /* Animación para el botón hamburguesa */
+    .mobile-menu-toggle svg {
+        transition: transform 0.3s ease;
+    }
+    
+    .mobile-menu-toggle.active svg {
+        transform: rotate(90deg);
+    }
+}
+
 @media (min-width: 1024px) {
     .main-nav {
         display: flex;
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
     }
 
     .header-buttons {
@@ -724,5 +818,73 @@ header {
     .footer-legal {
         flex-direction: row;
         gap: 1.5rem;
+    }
+}
+
+/* Reservation Form Styles */
+.consultation-form {
+    padding: 4rem 0;
+    position: relative;
+}
+
+.form-container {
+    background-color: var(--backgroundsection-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group-title {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .form-row {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .form-group-title {
+        margin-bottom: 0;
+        margin-right: 1rem;
     }
 }
